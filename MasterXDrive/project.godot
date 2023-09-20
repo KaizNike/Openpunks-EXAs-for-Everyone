@@ -18,6 +18,10 @@ _global_script_class_icons={
 config/name="MasterXDrive"
 config/icon="res://icon.png"
 
+[autoload]
+
+Globals="*res://src/Globals.tscn"
+
 [rendering]
 
 quality/driver/driver_name="GLES2"
