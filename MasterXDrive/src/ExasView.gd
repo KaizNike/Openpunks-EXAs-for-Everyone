@@ -2,9 +2,9 @@ extends Node2D
 
 const cell_len = 10
 const offset = Vector2(2,2)
-onready var lines := $Lines
+@onready var lines := $Lines
 
-export (PackedScene) var exa
+@export var exa : PackedScene
 
 # basic layout to test
 const mXD = {"loc": Vector2(12, 3), "data": [{"packageType": "EXA", "contents": "NOTE: EDIT ME\n", "loc": Vector2(0,0)}]}
@@ -32,7 +32,7 @@ func _ready():
 			loc += offset
 			line.add_point(loc)
 		lines.add_child(line)
-	yield(get_tree(),"idle_frame")
+	await get_tree().physics_frame
 	read_data(mXD.data)
 	print("DONE")
 
@@ -41,7 +41,7 @@ func read_data(data:Array):
 	for item in data:
 		if item.packageType == "EXA":
 			Globals.exaScripts += item.contents
-			var newExa = exa.instance()
+			var newExa = exa.instantiate()
 			newExa.position = offset + Vector2(item.loc.x * cell_len + cell_len / 2, item.loc.y * cell_len + cell_len / 2)
 			$DataTypes.add_child(newExa)
 		pass

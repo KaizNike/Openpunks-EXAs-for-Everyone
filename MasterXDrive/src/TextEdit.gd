@@ -8,7 +8,7 @@ extends TextEdit
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Globals.connect("scriptChangeEmit", self,"newScript")
+	Globals.connect("scriptChangeEmit", Callable(self, "newScript"))
 	pass # Replace with function body.
 
 
