@@ -1,6 +1,6 @@
 extends Node
 
-var exaScripts = "" setget exaScripts_Changed
+var exaScripts = [] setget exaScripts_Changed
 
 signal scriptChangeEmit
 # Called when the node enters the scene tree for the first time.

@@ -1,0 +1,169 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/TextEdit.gd" type="Script" id=1]
+
+[sub_resource type="Theme" id=1]
+
+[node name="EXAWindow" type="VSplitContainer"]
+margin_right = 675.0
+margin_bottom = 232.0
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+margin_right = 675.0
+margin_bottom = 34.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 668.0
+margin_bottom = 27.0
+
+[node name="Button" type="Button" parent="PanelContainer/HBoxContainer"]
+margin_right = 49.0
+margin_bottom = 20.0
+text = "Hide^"
+
+[node name="Button2" type="Button" parent="PanelContainer/HBoxContainer"]
+margin_left = 53.0
+margin_right = 97.0
+margin_bottom = 20.0
+text = "Pop>"
+
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer"]
+margin_left = 101.0
+margin_top = 3.0
+margin_right = 637.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "XA"
+align = 1
+
+[node name="Button3" type="Button" parent="PanelContainer/HBoxContainer"]
+self_modulate = Color( 1, 0, 0, 1 )
+margin_left = 641.0
+margin_right = 661.0
+margin_bottom = 20.0
+text = "X"
+
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+margin_top = 46.0
+margin_right = 675.0
+margin_bottom = 232.0
+
+[node name="TextEdit" type="TextEdit" parent="HSplitContainer"]
+margin_right = 573.0
+margin_bottom = 186.0
+rect_min_size = Vector2( 0, 100 )
+size_flags_horizontal = 3
+text = "hello"
+script = ExtResource( 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer"]
+margin_left = 585.0
+margin_right = 675.0
+margin_bottom = 186.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HSplitContainer/VBoxContainer"]
+margin_right = 90.0
+margin_bottom = 28.0
+
+[node name="HSplitContainer" type="HSplitContainer" parent="HSplitContainer/VBoxContainer/PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 83.0
+margin_bottom = 21.0
+
+[node name="Label" type="Label" parent="HSplitContainer/VBoxContainer/PanelContainer/HSplitContainer"]
+margin_right = 12.0
+margin_bottom = 14.0
+text = "X:"
+
+[node name="Label2" type="Label" parent="HSplitContainer/VBoxContainer/PanelContainer/HSplitContainer"]
+margin_left = 24.0
+margin_right = 76.0
+margin_bottom = 14.0
+text = "9999"
+
+[node name="PanelContainer2" type="PanelContainer" parent="HSplitContainer/VBoxContainer"]
+margin_top = 32.0
+margin_right = 90.0
+margin_bottom = 60.0
+
+[node name="HSplitContainer" type="HSplitContainer" parent="HSplitContainer/VBoxContainer/PanelContainer2"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 83.0
+margin_bottom = 21.0
+
+[node name="Label" type="Label" parent="HSplitContainer/VBoxContainer/PanelContainer2/HSplitContainer"]
+margin_right = 11.0
+margin_bottom = 14.0
+text = "T:"
+
+[node name="Label2" type="Label" parent="HSplitContainer/VBoxContainer/PanelContainer2/HSplitContainer"]
+margin_left = 23.0
+margin_right = 76.0
+margin_bottom = 14.0
+text = "9999"
+
+[node name="PanelContainer4" type="PanelContainer" parent="HSplitContainer/VBoxContainer"]
+margin_top = 64.0
+margin_right = 90.0
+margin_bottom = 92.0
+
+[node name="HSplitContainer" type="HSplitContainer" parent="HSplitContainer/VBoxContainer/PanelContainer4"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 83.0
+margin_bottom = 21.0
+
+[node name="Label" type="Label" parent="HSplitContainer/VBoxContainer/PanelContainer4/HSplitContainer"]
+margin_right = 11.0
+margin_bottom = 14.0
+text = "F:"
+
+[node name="Label2" type="Label" parent="HSplitContainer/VBoxContainer/PanelContainer4/HSplitContainer"]
+margin_left = 23.0
+margin_right = 76.0
+margin_bottom = 14.0
+text = "NONE"
+
+[node name="PanelContainer3" type="PanelContainer" parent="HSplitContainer/VBoxContainer"]
+margin_top = 96.0
+margin_right = 90.0
+margin_bottom = 186.0
+
+[node name="VSplitContainer" type="VBoxContainer" parent="HSplitContainer/VBoxContainer/PanelContainer3"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 83.0
+margin_bottom = 83.0
+
+[node name="HSplitContainer" type="HSplitContainer" parent="HSplitContainer/VBoxContainer/PanelContainer3/VSplitContainer"]
+margin_right = 76.0
+margin_bottom = 14.0
+
+[node name="Label" type="Label" parent="HSplitContainer/VBoxContainer/PanelContainer3/VSplitContainer/HSplitContainer"]
+margin_right = 16.0
+margin_bottom = 14.0
+text = "M:"
+
+[node name="Label2" type="Label" parent="HSplitContainer/VBoxContainer/PanelContainer3/VSplitContainer/HSplitContainer"]
+margin_left = 28.0
+margin_right = 76.0
+margin_bottom = 14.0
+text = "9999"
+
+[node name="CheckButton" type="CheckButton" parent="HSplitContainer/VBoxContainer/PanelContainer3/VSplitContainer"]
+margin_top = 18.0
+margin_right = 76.0
+margin_bottom = 58.0
+theme = SubResource( 1 )
+pressed = true
+
+[node name="Label" type="Label" parent="HSplitContainer/VBoxContainer/PanelContainer3/VSplitContainer"]
+margin_top = 62.0
+margin_right = 76.0
+margin_bottom = 76.0
+text = "GLOBAL"
+align = 1

@@ -7,7 +7,7 @@ onready var lines := $Lines
 export (PackedScene) var exa
 
 # basic layout to test
-const mXD = {"loc": Vector2(12, 3), "data": [{"packageType": "EXA", "contents": "NOTE: EDIT ME\n", "loc": Vector2(0,0)}]}
+const mXD = {"loc": Vector2(12, 3), "data": [{"packageType": "EXA", "contents": "NOTE: EDIT ME\n", "loc": Vector2(0,0)}, {"packageType": "EXA", "contents": "NOTE: EXA 2", "loc": Vector2(0,1)}]}
 
 # Standard Element Dictionary Layout
 const element = {"packageType": "None", "contents": "None", "loc": Vector2.ZERO}
@@ -40,7 +40,7 @@ func _ready():
 func read_data(data:Array):
 	for item in data:
 		if item.packageType == "EXA":
-			Globals.exaScripts += item.contents
+			Globals.exaScripts.append(item.contents)
 			var newExa = exa.instance()
 			newExa.position = offset + Vector2(item.loc.x * cell_len + cell_len / 2, item.loc.y * cell_len + cell_len / 2)
 			$DataTypes.add_child(newExa)
